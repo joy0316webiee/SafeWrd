@@ -1,0 +1,303 @@
+@import "../../assets/scss/base.scss";
+
+.home {
+  .content {
+    padding-top: 162px;
+    text-align: center;
+
+    @include phone {
+      padding-top: 55px;
+    }
+
+    .ads {
+      position: relative;
+      width: 1200px;
+      height: 341px;
+      margin: 0 auto;
+      background-size: cover;
+      background-position: -5px 32px;
+      background-repeat: no-repeat;
+      background-image: url("../../assets/images/map_bg.png");
+
+      @include tablet {
+        width: 850px;
+        background-size: 151%;
+        background-position: bottom;
+      }
+      @include phone {
+        width: auto;
+        height: 210px;
+        background-position: center;
+      }
+
+      .bright {
+        width: 417px;
+        height: 417px;
+        background-image: url("../../assets/images/oval.png");
+        border-radius: 50%;
+        opacity: 0.42;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        @include phone {
+          width: 250px;
+          height: 250px;
+        }
+      }
+      > img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 2;
+
+        @include phone {
+          width: 330px;
+        }
+      }
+      .playerHenry {
+        position: absolute;
+        left: 471px;
+        top: -61px;
+        z-index: 3;
+
+        @include tablet {
+          left: 301px;
+        }
+        @include phone {
+          left: 45%;
+        }
+      }
+      .playerMom {
+        position: absolute;
+        left: 645px;
+        top: -11px;
+        z-index: 3;
+
+        @include tablet {
+          left: 489px;
+        }
+        @include phone {
+          left: 60%;
+        }
+      }
+      .playerDad {
+        position: absolute;
+        left: 585px;
+        top: 68px;
+        z-index: 3;
+
+        @include tablet {
+          left: 415px;
+        }
+        @include phone {
+          left: 57%;
+        }
+      }
+    }
+    .desc {
+      width: 883px;
+      margin: 0 auto;
+
+      @include tablet {
+        width: 505px;
+      }
+      @include phone {
+        width: auto;
+        padding: 0px 20px;
+      }
+
+      h1 {
+        color: $white;
+        font-family: $poppins;
+        font-size: 40px;
+        margin: 0px;
+
+        @include tablet {
+          font-size: 25px;
+        }
+        @include phone {
+          font-size: 15px;
+        }
+      }
+      p {
+        opacity: 0.54;
+        color: $white;
+        font-family: $poppins;
+        font-size: 18px;
+        font-weight: 400;
+
+        @include tablet {
+          font-size: 14px;
+        }
+      }
+    }
+    .create {
+      width: 280px;
+      padding-bottom: 27px;
+      border-radius: 11px;
+      border: 2px solid rgba(256, 256, 256, 0.2);
+      display: flex;
+      flex-direction: column;
+      margin: 30px auto 0px;
+
+      .title {
+        h3 {
+          color: $white;
+          font-family: $poppins-semi-bold;
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+
+        > div {
+          &.facebook {
+            padding: 10px 10px 3px;
+            background-color: white;
+            border-radius: 17px;
+
+            img {
+              width: 46px;
+              height: 47px;
+            }
+          }
+          &.google {
+            padding: 12px 10px 7px;
+            border-radius: 17px;
+            background-color: white;
+            margin-left: 15px;
+
+            img {
+              width: 47px;
+              height: 41px;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: darken(white, 7%);
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .visited {
+      width: 406px;
+      padding: 20px 0px;
+      background-color: white;
+      margin-bottom: 12px;
+      margin-left: 12px;
+
+      @include tablet {
+        width: 50%;
+        margin-top: 20px;
+        margin: 20px auto 12px;
+      }
+      @include phone {
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .rating {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+
+        .circleMark {
+          width: 60px;
+          height: 60px;
+          background-color: $blue-lightest;
+          border-radius: 50%;
+          padding: 8px;
+
+          @include phone {
+            width: 40px;
+            height: 40px;
+            padding: 4px;
+          }
+
+          span {
+            width: 42px;
+            height: 42px;
+            background-color: $blue-lighter;
+            border-radius: 50%;
+            display: inline-block;
+
+            @include phone {
+              width: 32px;
+              height: 32px;
+            }
+          }
+        }
+        .desc {
+          margin-left: 15px;
+
+          .title {
+            padding-left: 6px;
+
+            span {
+              color: $black-lighter;
+              font-size: 16px;
+
+              @include phone {
+                font-size: 12px;
+              }
+
+              strong {
+                color: $blue-lighter-secondary;
+              }
+            }
+          }
+          .verified {
+            display: flex;
+            align-items: center;
+
+            .verifiedImage {
+              width: 16px;
+              height: 16px;
+              display: inline-block;
+              position: relative;
+              background-color: $blue-lighter-third;
+              border-radius: 50%;
+
+              img {
+                width: 9px;
+                height: 8px;
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, 58%);
+              }
+            }
+            .verifiedLabel {
+              margin-left: 6px;
+              color: $grey-primary;
+              font-size: 15px;
+
+              @include phone {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .copyright {
+      text-align: center;
+      p {
+        color: white;
+
+        @include tablet {
+          padding: 0px 34px;
+        }
+        @include phone {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

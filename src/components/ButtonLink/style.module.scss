@@ -1,0 +1,29 @@
+@import "../../assets/scss/base.scss";
+
+.buttonWrapper {
+  button {
+    height: 48px;
+    padding: 0px 29px;
+    color: $white;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    background: none;
+
+    @include phone {
+      font-size: 13px;
+      height: 32px;
+      padding: 0 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+    &.active {
+      box-shadow: 0 23px 21px -12px rgba(0, 0, 0, 0.18) !important;
+      border-radius: 52px;
+      background-image: linear-gradient(135deg, #00a2ff 0%, #5560f3 100%);
+    }
+  }
+}

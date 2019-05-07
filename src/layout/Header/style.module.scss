@@ -1,0 +1,40 @@
+@import "../../assets/scss/base.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 41px 0px 53px;
+
+  @include phone {
+    padding: 20px 10px 20px 10px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .imgLogo {
+      @include phone {
+        width: 50px;
+      }
+    }
+    span {
+      color: white;
+      font-size: 22px;
+      margin-left: 8px;
+
+      @include phone {
+        font-size: 18px;
+      }
+    }
+  }
+  .links {
+    display: flex;
+    align-items: center;
+  }
+}

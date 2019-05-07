@@ -1,0 +1,61 @@
+@import "../../assets/scss/base.scss";
+
+.player {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  padding-right: 20px;
+  border-radius: 16px;
+  background-color: $blue-secondary;
+
+  .button {
+    width: 32px;
+    height: 32px;
+    background-color: $white;
+    border-radius: 50%;
+    padding: 5px 11px;
+
+    @include phone {
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: darken($white, 7%);
+    }
+  }
+  .title {
+    margin-left: 10px;
+
+    span {
+      color: $white;
+      font-family: $poppins-semi-bold;
+      font-size: 15px;
+      font-weight: 600;
+
+      @include phone {
+        font-size: 12px;
+      }
+    }
+  }
+  .status {
+    margin-left: 11px;
+
+    .statusImg {
+      width: 7px;
+      height: 7px;
+      background-color: $red-primary;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .statusLabel {
+      color: $white;
+      font-family: $poppins-semi-bold;
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-left: 4px;
+    }
+  }
+}

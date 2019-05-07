@@ -1,0 +1,26 @@
+@import "./assets/scss/base.scss";
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: $poppins;
+  min-width: $min-width;
+  background-color: $blue-primary;
+
+  @include desktop-lg {
+    width: $desktop;
+  }
+}
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+div {
+  // border: 1px solid #ddd;
+}
